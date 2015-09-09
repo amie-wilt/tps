@@ -1,24 +1,26 @@
 'use strict';
 
 angular.module('tps', [
-  'ui.router'
+  'ui.router',
+  'tps.homeCtrl',
+  'tps.homeFactory'
 ])
 
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('home.html');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
       .state('home', {                    //name of state
         url: '/home',                     //the url that will show at the top in url bar
         templateUrl: 'views/home.html',   //the location of the html file for the state
-        controller: 'homeController'      //the controller associated with the state
+        controller: 'homeCtrl'            //the controller associated with the state
       })
-      .state('mobile-detailing.home', {
+      .state('mobile-detailing', {
         url: '/mobile-detailing',
         templateUrl: 'views/mobile-detailing/mobile-detailing.html'
       })
-      .state('pressure-washing.home', {
+      .state('pressure-washing', {
         url: '/pressure-washing',
         templateUrl: 'views/pressure-washing/pressure-washing.html'
       })

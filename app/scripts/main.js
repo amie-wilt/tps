@@ -3,7 +3,9 @@
 angular.module('tps', [
   'ui.router',
   'tps.homeCtrl',
-  'tps.homeFactory'
+  'tps.homeFactory',
+  'tps.mdServicesCtrl',
+  'tps.mdServicesFactory'
 ])
 
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -18,28 +20,16 @@ angular.module('tps', [
       })
       .state('mobile-detailing', {
         url: '/mobile-detailing',
-        templateUrl: 'views/mobile-detailing/mobile-detailing.html'
+        templateUrl: '../views/mobile-detailing.html'
+      })
+      .state('mobile-detailing.md-services', {
+        url: 'mobile-detailing/services',
+        templateUrl: '../partials/md-services.html',
+        controller: 'mdServicesCtrl'
       })
       .state('pressure-washing', {
         url: '/pressure-washing',
-        templateUrl: 'views/pressure-washing/pressure-washing.html'
+        templateUrl: '../views/pressure-washing.html'
       })
   }])
-
-  //.controller('MobileDetailServicesCtrl', ($scope) => {
-  //  $scope.services = {
-  //    carWash: {
-  //      name: 'Car Wash',
-  //      price: 25
-  //    },
-  //    washWax: {
-  //      name: 'Wash and Wax',
-  //      price: 50
-  //    },
-  //    fullDetail: {
-  //      name: 'Full Detail',
-  //      price: '130'
-  //    }
-  //  }
-  //})
 ;

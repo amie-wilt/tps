@@ -4,7 +4,9 @@ angular.module('tps', [
   'ui.router',
   'homeMod',
   'mdAboutMod',
-  'mdServicesMod'
+  'mdServicesMod',
+  'pwAboutMod',
+  'pwServicesMod'
 ])
 
   .config(function($stateProvider, $urlRouterProvider) {
@@ -21,12 +23,12 @@ angular.module('tps', [
         url: '/mobile-detailing',
         templateUrl: '../views/mobile-detailing.html'
       })
-      .state('mobile-detailing.md-about', {
+      .state('mobile-detailing.about', {
         url: '/mobile-detailing/about',
         templateUrl: '../partials/md-about.html',
         controller: 'mdAboutCtrl'
       })
-      .state('mobile-detailing.md-services', {
+      .state('mobile-detailing.services', {
         url: 'mobile-detailing/services',
         templateUrl: '../partials/md-services.html',
         controller: 'mdServicesCtrl'
@@ -34,6 +36,16 @@ angular.module('tps', [
       .state('pressure-washing', {
         url: '/pressure-washing',
         templateUrl: '../views/pressure-washing.html'
+      })
+      .state('pressure-washing.about', {
+        url: 'pressure-washing/about',
+        templateUrl: '../partials/pw-about.html',
+        controller: 'pwAboutCtrl'
+      })
+      .state('pressure-washing.services', {
+        url: 'pressure-washing/services',
+        templateUrl: '../partials/pw-services.html',
+        controller: 'pwServicesCtrl'
       })
   })
 ;

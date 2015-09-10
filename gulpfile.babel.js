@@ -1,5 +1,5 @@
 // generated on 2015-09-08 using generator-gulp-webapp 1.0.3
-import gulpIgnore from 'gulp-ignore'
+
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';

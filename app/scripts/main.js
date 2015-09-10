@@ -2,13 +2,11 @@
 
 angular.module('tps', [
   'ui.router',
-  'tps.homeCtrl',
-  'tps.homeFactory',
-  'tps.mdServicesCtrl',
-  'tps.mdServicesFactory'
+  'homeMod',
+  'mdServicesMod'
 ])
 
-  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
@@ -16,7 +14,7 @@ angular.module('tps', [
       .state('home', {                    //name of state
         url: '/home',                     //the url that will show at the top in url bar
         templateUrl: 'views/home.html',   //the location of the html file for the state
-        controller: 'homeCtrl'            //the controller associated with the state
+        controller: 'homeCtrl'            //the controller associated with the state,
       })
       .state('mobile-detailing', {
         url: '/mobile-detailing',
@@ -31,5 +29,5 @@ angular.module('tps', [
         url: '/pressure-washing',
         templateUrl: '../views/pressure-washing.html'
       })
-  }])
+  })
 ;

@@ -1,7 +1,27 @@
-angular.module('tps.homeCtrl', [])
-  .controller('homeCtrl', ['$scope', 'Home', function($scope, Home) {
+angular.module('homeMod', [])
+  .factory('homeFactory', function() {
     "use strict";
-    $scope.companyName = Home.companyName;
-    $scope.companyServices = Home.companyServices;
-  }])
-;
+    return {
+      companyName: "Tony's Performance Services",
+      companyServices: [
+        {
+          name: "Mobile Detailing",
+          sref: "mobile-detailing"
+        },
+        {
+          name: "Pressure Washing",
+          sref: "pressure-washing"
+        }
+      ]
+    }
+  })
+
+  .controller('homeCtrl', HomeCtrl);
+
+
+class HomeCtrl {
+  constructor($scope, homeFactory) {
+    $scope.companyName = homeFactory.companyName;
+    $scope.companyServices = homeFactory.companyServices;
+  }
+}

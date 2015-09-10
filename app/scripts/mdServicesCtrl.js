@@ -1,6 +1,26 @@
-angular.module('tps.mdServicesCtrl', [])
-  .controller('mdServicesCtrl', ['$scope', 'mdServices', function($scope, mdServices) {
+angular.module('mdServicesMod', [])
+  .factory('mdServicesFactory', [function () {
     "use strict";
-    $scope.mdServices = mdServices.;
+    return {
+      mdServices: [
+        {
+          name: 'Wash',
+          price: '30'
+        },
+        {
+          name: 'Wash and Wax',
+          price: 50
+        },
+        {
+          name: 'Full Detail',
+          price: '130'
+        }
+      ]
+    }
   }])
+
+  .controller('mdServicesCtrl', function($scope, mdServicesFactory) {
+    "use strict";
+    $scope.mdServices = mdServicesFactory.mdServices;
+  })
 ;

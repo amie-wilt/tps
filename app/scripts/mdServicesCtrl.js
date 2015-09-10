@@ -1,6 +1,5 @@
 angular.module('mdServicesMod', [])
   .factory('mdServicesFactory', [function () {
-    "use strict";
     return {
       mdServices: [
         {
@@ -16,11 +15,10 @@ angular.module('mdServicesMod', [])
           price: '130'
         }
       ]
-    }
+    };
   }])
 
   .controller('mdServicesCtrl', function($scope, mdServicesFactory) {
-    "use strict";
     $scope.mdServices = mdServicesFactory.mdServices;
   })
 ;

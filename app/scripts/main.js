@@ -33,6 +33,10 @@ angular.module('tps', [
         templateUrl: '../partials/md-services.html',
         controller: 'mdServicesCtrl'
       })
+      .state('mobile-detailing.contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html'
+      })
       .state('pressure-washing', {
         url: '/pressure-washing',
         templateUrl: '../views/pressure-washing.html'
@@ -47,5 +51,9 @@ angular.module('tps', [
         templateUrl: '../partials/pw-services.html',
         controller: 'pwServicesCtrl'
       })
+      .state('pressure-washing.contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html'
+      });
   })
 ;

@@ -3,15 +3,15 @@ angular.module('pwServicesMod', [])
     return {
       pwServices: [
         {
-          name: "Residential",
+          name: 'Residential',
           price: 200
         },
         {
-          name: "Commercial",
+          name: 'Commercial',
           price: 2000
         }
       ]
-    }
+    };
   })
 
   .controller('pwServicesCtrl', function($scope, pwServicesFactory) {

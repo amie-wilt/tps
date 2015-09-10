@@ -12,6 +12,7 @@
     "gulp-cache": "^0.2.8",
     "gulp-eslint": "^0.13.2",
     "gulp-if": "^1.2.5",
+    "gulp-ignore": "^1.2.1",
     "gulp-imagemin": "^2.2.1",
     "gulp-load-plugins": "^0.10.0",
     "gulp-minify-css": "^1.1.1",
@@ -27,15 +28,20 @@
     "wiredep": "^2.2.2"
   },
   "eslintConfig": {
+    "globals": {
+      "angular": true
+    },
     "env": {
       "node": true,
-      "browser": true
+      "browser": true,
+      "es6": true
     },
     "rules": {
       "quotes": [
         2,
         "single"
-      ]
+      ],
+      "strict": 0
     }
   }
 }

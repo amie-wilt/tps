@@ -1,5 +1,5 @@
 angular.module('homeMod', [])
-  .factory('homeFactory', function() {
+  .factory('homeFactory', [function() {
     "use strict";
     return {
       companyName: "Tony's Performance Services",
@@ -14,14 +14,18 @@ angular.module('homeMod', [])
         }
       ]
     }
-  })
+  }])
 
-  .controller('homeCtrl', HomeCtrl);
-
-
-class HomeCtrl {
-  constructor($scope, homeFactory) {
+  .controller('homeCtrl', function($scope, homeFactory) {
     $scope.companyName = homeFactory.companyName;
     $scope.companyServices = homeFactory.companyServices;
-  }
-}
+  })
+;
+
+//class HomeCtrl {
+//  constructor($scope, homeFactory) {
+//    "use strict";
+//    $scope.companyName = homeFactory.companyName;
+//    $scope.companyServices = homeFactory.companyServices;
+//  }
+//}

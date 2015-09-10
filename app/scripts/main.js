@@ -3,6 +3,7 @@
 angular.module('tps', [
   'ui.router',
   'homeMod',
+  'mdAboutMod',
   'mdServicesMod'
 ])
 
@@ -19,6 +20,11 @@ angular.module('tps', [
       .state('mobile-detailing', {
         url: '/mobile-detailing',
         templateUrl: '../views/mobile-detailing.html'
+      })
+      .state('mobile-detailing.md-about', {
+        url: '/mobile-detailing/about',
+        templateUrl: '../partials/md-about.html',
+        controller: 'mdAboutCtrl'
       })
       .state('mobile-detailing.md-services', {
         url: 'mobile-detailing/services',

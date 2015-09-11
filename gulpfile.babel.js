@@ -1,6 +1,8 @@
 // generated on 2015-09-08 using generator-gulp-webapp 1.0.3
 
 import gulp from 'gulp';
+import gulpBabel from 'gulp-babel';
+import es from 'event-stream';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
@@ -42,12 +44,24 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
+gulp.task('babel', function () {
+  return gulp.src('app/scripts/*.js')
+  .pipe($.babel())
+  .pipe(gulp.dest('.tmp/scripts'))
+});
+
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
+  var babeledJs = gulp.src('app/scripts/*.js').pipe($.babel());
+
+  var bowerJs = gulp.src('bower_components/**/*.js');
+
+  var allJs = es.merge(babeledJs, bowerJs);
+
   return gulp.src('app/*.html')
     .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
+    .pipe($.if(allJs, $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
@@ -157,7 +171,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'babel', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

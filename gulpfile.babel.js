@@ -53,16 +53,10 @@ gulp.task('babel', function () {
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  var babeledJs = gulp.src('app/scripts/*.js').pipe($.babel());
-
-  var bowerJs = gulp.src('bower_components/**/*.js');
-
-  var allJs = es.merge(babeledJs, bowerJs);
-
   return gulp.src('app/*.html')
     .pipe(assets)
-    .pipe($.if(allJs, $.uglify()))
-    .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+    .pipe($.if('scripts/*.js', $.uglify()))
+    .pipe($.if('styles/*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))

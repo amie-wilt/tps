@@ -98,10 +98,10 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+gulp.task('serve', ['babel', 'styles', 'fonts'], () => {
   browserSync({
     notify: false,
-    port: 9000,
+    port: 9001,
     server: {
       baseDir: ['.tmp', 'app'],
       routes: {
@@ -112,7 +112,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
-    'app/scripts/**/*.js',
+    '.tmp/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
@@ -120,6 +120,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
+  gulp.watch('app/scripts/**/*.js', ['babel']);
 });
 
 gulp.task('serve:dist', () => {

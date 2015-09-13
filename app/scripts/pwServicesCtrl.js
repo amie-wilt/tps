@@ -1,6 +1,6 @@
 class PwServicesCtrl {
-  constructor ($scope, pwServicesFactory) {
-    $scope.pwServices = pwServicesFactory.pwServices;
+  constructor ($scope, pwServicesFac) {
+    $scope.pwServices = pwServicesFac.pwServices;
   }
 }
 
@@ -20,6 +20,6 @@ var pwServicesFactory = () => {
 };
 
 angular.module('pwServicesMod', [])
-  .factory('pwServicesFactory', pwServicesFactory)
+  .factory('pwServicesFac', pwServicesFactory)
 
   .controller('pwServicesCtrl', PwServicesCtrl);

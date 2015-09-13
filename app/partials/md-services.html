@@ -1,8 +1,14 @@
 <section>
   <ul>
     <li ng-repeat="service in mdServices">
-      {{ service.name }}
-      {{ service.price }}
+      <h2>{{ service.name }}</h2>
+      <p>{{ service.includes }}</p>
+      <ul>
+        <li ng-repeat="costInfo in service.prices">
+          <span>{{ costInfo.type }}</span>
+          <span>{{ costInfo.typePrice }}</span>
+        </li>
+      </ul>
     </li>
   </ul>
 </section>

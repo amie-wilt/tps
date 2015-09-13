@@ -1,7 +1,7 @@
 class HomeCtrl {
-  constructor($scope, homeFactory) {
-    $scope.companyName = homeFactory.companyName;
-    $scope.companyServices = homeFactory.companyServices;
+  constructor($scope, homeFac) {
+    $scope.companyName = homeFac.companyName;
+    $scope.companyServices = homeFac.companyServices;
   }
 }
 
@@ -23,6 +23,6 @@ var homeFactory = () => {
 
 angular.module('homeMod', [])
 
-  .factory('homeFactory', homeFactory)
+  .factory('homeFac', homeFactory)
 
   .controller('homeCtrl', HomeCtrl);

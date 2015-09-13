@@ -1,6 +1,6 @@
 class PwAboutCtrl {
-  constructor ($scope, pwAboutFactory) {
-    $scope.description = pwAboutFactory.description;
+  constructor ($scope, pwAboutFac) {
+    $scope.description = pwAboutFac.description;
   }
 }
 
@@ -10,7 +10,7 @@ var pwAboutFactory = () => {
   };
 };
 angular.module('pwAboutMod', [])
-  .factory('pwAboutFactory', pwAboutFactory)
+  .factory('pwAboutFac', pwAboutFactory)
 
   .controller('pwAboutCtrl', PwAboutCtrl)
 ;

@@ -1,6 +1,6 @@
 class MdAboutCtrl {
-  constructor ($scope, mdAboutFactory) {
-    $scope.description = mdAboutFactory.description;
+  constructor ($scope, mdAboutFac) {
+    $scope.description = mdAboutFac.description;
   }
 }
 
@@ -11,6 +11,6 @@ var mdAboutFactory = () => {
 };
 
 angular.module('mdAboutMod', [])
-  .factory('mdAboutFactory', mdAboutFactory)
+  .factory('mdAboutFac', mdAboutFactory)
 
   .controller('mdAboutCtrl', MdAboutCtrl);

@@ -5,9 +5,7 @@ class HomeCtrl {
   }
 }
 
-angular.module('homeMod', [])
-
-.factory('homeFactory', [function () {
+var homeFactory = () => {
   return {
     companyName: 'Tony\'s Performance Services',
     companyServices: [
@@ -21,7 +19,10 @@ angular.module('homeMod', [])
       }
     ]
   };
-}])
+};
 
-  .controller('homeCtrl', HomeCtrl)
-;
+angular.module('homeMod', [])
+
+  .factory('homeFactory', homeFactory)
+
+  .controller('homeCtrl', HomeCtrl);

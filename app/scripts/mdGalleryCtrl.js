@@ -1,6 +1,13 @@
 class MdGalleryCtrl {
   constructor($scope, mdGalleryFac) {
     $scope.slides = mdGalleryFac.slides;
+    $scope.currentIndex = 0;
+    $scope.setCurrentIndex = (i) => {
+      $scope.currentIndex = i;
+    };
+    $scope.isCurrentSlideIndex = (i) => {
+      return $scope.currentIndex === i;
+    };
   }
 }
 
@@ -31,3 +38,5 @@ angular.module('mdGalleryMod', ['ngAnimate'])
   .factory('mdGalleryFac', mdGalleryFactory)
 
   .controller('mdGalleryCtrl', MdGalleryCtrl);
+
+

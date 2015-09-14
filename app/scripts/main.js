@@ -33,6 +33,11 @@ angular.module('tps', [
         templateUrl: '../partials/md-services.html',
         controller: 'mdServicesCtrl'
       })
+      .state('mobile-detailing.gallery', {
+        url: 'mobile-detailing/gallery',
+        templateUrl: '..partials/md-gallery',
+        controller: 'mdGalleryCtrl'
+      })
       .state('mobile-detailing.contact', {
         url: '/contact',
         templateUrl: 'views/contact.html'

@@ -1,37 +1,33 @@
-angular.module('mdGalleryMod', ['ngAnimate'])
-  .controller('mdGalleryCtrl', ($scope) => {
-    $scope.slides = [
+class MdGalleryCtrl {
+  constructor($scope, mdGalleryFac) {
+    $scope.slides = mdGalleryFac.slides;
+  }
+}
+
+var mdGalleryFactory = () => {
+  return {
+    slides: [
       {
-        image: '',
-        description: ''
+        image: '../images/exterior.png',
+        description: 'Truck before and after'
       },
       {
-        image: '',
-        description: ''
+        image: '../images/interior.png',
+        description: 'Car before and after'
       },
       {
-        image: '',
-        description: ''
+        image: '../images/seadoo.png',
+        description: 'Seadoo before and after'
       },
       {
-        image: '',
-        description: ''
-      },
-      {
-        image: '',
-        description: ''
-      },
-      {
-        image: '',
-        description: ''
-      },
-      {
-        image: '',
-        description: ''
-      },
-      {
-        image: '',
-        description: ''
+        image: '../images/wheel.png',
+        description: 'Wheel before and after'
       }
-    ];
-  });
+    ]
+  };
+};
+
+angular.module('mdGalleryMod', ['ngAnimate'])
+  .factory('mdGalleryFac', mdGalleryFactory)
+
+  .controller('mdGalleryCtrl', MdGalleryCtrl);

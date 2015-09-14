@@ -4,6 +4,7 @@ angular.module('tps', [
   'ui.router',
   'homeMod',
   'mdAboutMod',
+  'mdGalleryMod',
   'mdServicesMod',
   'pwAboutMod',
   'pwServicesMod'
@@ -29,13 +30,13 @@ angular.module('tps', [
         controller: 'mdAboutCtrl'
       })
       .state('mobile-detailing.services', {
-        url: 'mobile-detailing/services',
+        url: '/mobile-detailing/services',
         templateUrl: '../partials/md-services.html',
         controller: 'mdServicesCtrl'
       })
       .state('mobile-detailing.gallery', {
-        url: 'mobile-detailing/gallery',
-        templateUrl: '..partials/md-gallery',
+        url: '/mobile-detailing/gallery',
+        templateUrl: '../partials/md-gallery.html',
         controller: 'mdGalleryCtrl'
       })
       .state('mobile-detailing.contact', {
@@ -47,12 +48,12 @@ angular.module('tps', [
         templateUrl: '../views/pressure-washing.html'
       })
       .state('pressure-washing.about', {
-        url: 'pressure-washing/about',
+        url: '/pressure-washing/about',
         templateUrl: '../partials/pw-about.html',
         controller: 'pwAboutCtrl'
       })
       .state('pressure-washing.services', {
-        url: 'pressure-washing/services',
+        url: '/pressure-washing/services',
         templateUrl: '../partials/pw-services.html',
         controller: 'pwServicesCtrl'
       })

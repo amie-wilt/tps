@@ -22,7 +22,6 @@ var homeFactory = () => {
 };
 
 angular.module('homeMod', [])
-
   .factory('homeFac', homeFactory)
 
   .controller('homeCtrl', HomeCtrl);

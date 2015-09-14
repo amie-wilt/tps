@@ -28,7 +28,8 @@ angular.module('mdGalleryMod', ['ngAnimate'])
       {
         image: '',
         description: ''
-      },{
+      },
+      {
         image: '',
         description: ''
       }

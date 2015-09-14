@@ -16,8 +16,10 @@
   },
   "devDependencies": {
     "angular": "~1.4.5",
+    "angular-animate": "~1.4.5",
     "angular-ui-router": "~0.2.15",
     "chai": "~3.2.0",
+    "gsap": "~1.18.0",
     "mocha": "~2.3.2"
   }
 }

@@ -19,6 +19,11 @@ angular.module('tps', [
         templateUrl: 'views/home.html',   //the location of the html file for the state
         controller: 'homeCtrl'            //the controller associated with the state,
       })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: '/views/contact.html',
+        controller: 'contactCtrl'
+      })
       .state('mobile-detailing', {
         url: '/mobile-detailing',
         templateUrl: '../views/mobile-detailing.html'

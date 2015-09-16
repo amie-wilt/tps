@@ -32,7 +32,8 @@
   },
   "eslintConfig": {
     "globals": {
-      "angular": true
+      "angular": true,
+      "$": false
     },
     "env": {
       "node": true,

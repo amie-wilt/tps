@@ -63,6 +63,11 @@ gulp.task('html', ['styles'], () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('php', () => {
+  return gulp.src('app/*.php')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
@@ -112,6 +117,7 @@ gulp.task('serve', ['babel', 'styles', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
+    'app/*.php',
     '.tmp/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
@@ -166,7 +172,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'babel', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'babel', 'html', 'php', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

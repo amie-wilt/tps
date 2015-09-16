@@ -5,6 +5,7 @@ angular.module('tps', [
   'homeMod',
   'mdAboutMod',
   'mdServicesMod',
+  'contactMod',
   'pwAboutMod',
   'pwServicesMod'
 ])
@@ -40,7 +41,8 @@ angular.module('tps', [
       })
       .state('mobile-detailing.contact', {
         url: '/contact',
-        templateUrl: 'views/contact.html'
+        templateUrl: 'views/contact.html',
+        controller: 'contactCtrl'
       })
       .state('pressure-washing', {
         url: '/pressure-washing',

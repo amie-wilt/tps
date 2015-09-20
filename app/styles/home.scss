@@ -1,0 +1,35 @@
+.home-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  header {
+
+  }
+
+  hgroup {
+    text-align: center;
+
+    h1 {
+      font-size: 5vmin;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 1px 1px 2px #777;
+
+    }
+
+    .container {
+      margin-top: 5vmin;
+
+      h2 {
+        padding: 20px 30px;
+        border: 2px solid rgba(255, 255, 255, 1);
+        font-size: 3vmin;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 1px 1px 2px #777;
+      }
+    }
+  }
+}

@@ -2,7 +2,11 @@
   "name": "tps2",
   "private": true,
   "dependencies": {
+    "angular": "~1.4.6",
+    "angular-animate": "~1.4.6",
+    "angular-ui-router": "~0.2.15",
     "bootstrap-sass": "~3.3.5",
+    "gsap": "~1.18.0",
     "modernizr": "~2.8.1"
   },
   "overrides": {
@@ -12,14 +16,16 @@
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
       ]
+    },
+    "meyer-reset": {
+      "main": [
+        "stylesheets/_meyer-reset.scss"
+      ]
     }
   },
   "devDependencies": {
-    "angular": "~1.4.5",
-    "angular-animate": "~1.4.5",
-    "angular-ui-router": "~0.2.15",
     "chai": "~3.2.0",
-    "gsap": "~1.18.0",
+    "meyer-reset": "*",
     "mocha": "~2.3.2"
   }
 }

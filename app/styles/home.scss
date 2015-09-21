@@ -1,0 +1,37 @@
+.home-section {
+  hgroup {
+    text-align: center;
+
+    .logo {
+      max-width: 100px;
+    }
+
+    h1 {
+      font-size: 5vmin;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 1px 1px 2px rgb(0, 26, 50);
+      margin-bottom: 4vmin;
+
+    }
+
+    h2 {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 20px 30px;
+      border: 2px solid rgba(255, 255, 255, 1);
+      font-size: 3vmin;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 1px 1px 1px rgb(0, 26, 50);
+
+      &:hover {
+        color: rgb(0, 26, 50);
+        text-shadow: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid transparent;
+      }
+    }
+  }
+
+}

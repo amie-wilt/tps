@@ -141,6 +141,7 @@ gulp.task('serve', ['babel', 'js', 'styles', 'fonts'], () => {
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
   gulp.watch('app/scripts/**/*.js', ['babel']);
+  gulp.watch('.tmp/scripts/*.js', ['js'])
 });
 
 gulp.task('serve:dist', () => {

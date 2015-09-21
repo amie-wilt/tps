@@ -1,10 +1,15 @@
-<section class="jumbotron">
+<section class="home-section">
   <header>
     <hgroup>
+      <img src="images/tps-logo-washed.png" alt="" class="logo"/>
       <h1>{{ companyName }}</h1>
-      <a ng-repeat="service in companyServices" ui-sref="{{ service.sref }}">
-        <h2>{{ service.name }}</h2>
-      </a>
+      <div>
+        <div>
+          <a ng-repeat="service in companyServices" ui-sref="{{ service.sref }}">
+          <h2>{{ service.name }}</h2>
+        </a>
+        </div>
+      </div>
     </hgroup>
   </header>
 </section>

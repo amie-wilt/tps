@@ -5,15 +5,17 @@ $icon-font-path: '../fonts/';
 // endbower
 
 @import "home";
+@import "mobile-detailing-home";
+@import "index.scss";
 
 * {
   box-sizing: border-box;
 }
 
 main {
-  background-image: url('/images/splash.jpg');
+  font-family: 'Asap', sans-serif;
+  background: url('/images/splash.jpg') no-repeat center top;
   background-size: cover;
-  font-family: sans-serif;
   height: 100vh;
   display: flex;
   justify-content: center;

@@ -1,17 +1,17 @@
 .home-section {
-  header {
-
-  }
-
   hgroup {
     text-align: center;
+
+    .logo {
+      max-width: 100px;
+    }
 
     h1 {
       font-size: 5vmin;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 1);
-      text-shadow: 1px 1px 2px #777;
-      margin-bottom: 2.5vmin;
+      text-shadow: 1px 1px 2px rgb(0, 26, 50);
+      margin-bottom: 4vmin;
 
     }
 
@@ -23,7 +23,7 @@
       font-size: 3vmin;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 1);
-      text-shadow: 1px 1px 2px #777;
+      text-shadow: 1px 1px 1px rgb(0, 26, 50);
 
       &:hover {
         color: rgb(0, 26, 50);

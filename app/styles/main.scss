@@ -6,10 +6,18 @@ $icon-font-path: '../fonts/';
 
 @import "home";
 
+* {
+  box-sizing: border-box;
+}
+
 main {
   background-image: url('/images/splash.jpg');
   background-size: cover;
   font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .browserupgrade {

@@ -1,9 +1,4 @@
 .home-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   header {
 
   }
@@ -16,20 +11,27 @@
       text-transform: uppercase;
       color: rgba(255, 255, 255, 1);
       text-shadow: 1px 1px 2px #777;
+      margin-bottom: 2.5vmin;
 
     }
 
-    .container {
-      margin-top: 5vmin;
+    h2 {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 20px 30px;
+      border: 2px solid rgba(255, 255, 255, 1);
+      font-size: 3vmin;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 1px 1px 2px #777;
 
-      h2 {
-        padding: 20px 30px;
-        border: 2px solid rgba(255, 255, 255, 1);
-        font-size: 3vmin;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 1);
-        text-shadow: 1px 1px 2px #777;
+      &:hover {
+        color: rgb(0, 26, 50);
+        text-shadow: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid transparent;
       }
     }
   }
+
 }

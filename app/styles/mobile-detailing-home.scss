@@ -108,32 +108,8 @@
     text-align: center;
   }
 
-  .hr {
-    height: 1px;
-    width: 200px;
-    background-color: rgba(0,0,0,0.2);
-    margin: 2vmin auto;
-  }
-
   p {
     line-height: 2;
-  }
-}
-
-
-/******* FOOTER *********/
-
-.md-footer {
-  position: absolute;
-  width: 100%;
-  padding: 5vh 0;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  p {
-    text-transform: uppercase;
-    font-size: 1.5vmin;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.8);
   }
 }
 

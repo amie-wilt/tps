@@ -19,6 +19,15 @@ main {
   min-height: 100vh;
 }
 
+.hr {
+  height: 1px;
+  width: 200px;
+  background-color: rgba(0,0,0,0.2);
+  margin: 2vmin auto;
+}
+
+
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;

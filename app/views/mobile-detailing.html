@@ -1,20 +1,36 @@
-<section class="mobile-detailing-home-section">
+<div class="mobile-detailing-wrapper">
   <div class="md-logo-header-container jumbotron">
     <div class="md-logo-header-inner-container">
       <a ui-sref="home">
         <img src="images/tps-logo-washed.png" alt="" class="logo"/>
       </a>
 
-      <h1>Mobile Detailing</h1>
+      <div class="title-name-container">
+        <h1>{{ title }}</h1>
+        <h6>{{ tagline }}</h6>
+      </div>
     </div>
   </div>
 
-  <nav role="navigation" class="navigation">
-    <a ui-sref="home">Home</a>
-    <a ui-sref="mobile-detailing.about">About</a>
-    <a ui-sref="mobile-detailing.services">Services</a>
-    <a ui-sref="mobile-detailing.contact">Contact</a>
-  </nav>
+  <div class="nav-wrapper">
+    <nav role="navigation" class="navigation">
+      <a ui-sref="mobile-detailing">Home</a>
+      <a ui-sref="mobile-detailing.services">Services</a>
+      <a ui-sref="mobile-detailing.about">About</a>
+      <a ui-sref="mobile-detailing.contact">Contact</a>
+    </nav>
+  </div>
 
-  <div ui-view></div>
-</section>
+  <div ui-view>
+    <section class="md-home-section">
+      <h2>{{ descriptionTagline }}</h2>
+
+      <div class="hr"></div>
+      <p ng-repeat="description in descriptions">{{ description }}</p>
+    </section>
+  </div>
+</div>
+
+<footer class="md-footer">
+  <p>Tony's Performance Services | 2015</p>
+</footer>

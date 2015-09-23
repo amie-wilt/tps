@@ -1,11 +1,33 @@
 .md-services-section {
-  text-align: center;
-  color: rgb(0, 26, 50);
+  color: rgba(0, 0, 0, 0.6);
   max-width: 700px;
-  margin: 5vmin auto 0 auto;
+  margin: 5vmin auto 10vmin auto;
+
+  h1 {
+    margin-bottom: 5vmin;
+  }
 
   ul {
+    text-align: center;
     list-style: none;
+    padding: 0;
+
+    h2 {
+      font-weight: bold;
+    }
+
+    ul {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 3vmin;
+
+      .vehicle-type {
+        text-transform: uppercase;
+      }
+      .price {
+        font-weight: bold;
+        color: rgb(153, 204, 0);
+      }
+    }
 
     h2 {
       font-size: 2vmin;

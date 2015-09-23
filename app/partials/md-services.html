@@ -1,12 +1,13 @@
 <section class="md-services-section">
+  <h1>Services</h1>
   <ul>
     <li ng-repeat="service in mdServices">
       <h2>{{ service.name }}</h2>
       <p>{{ service.includes }}</p>
       <ul>
         <li ng-repeat="costInfo in service.prices">
-          <span>{{ costInfo.type }}: </span>
-          <span>{{ costInfo.typePrice | currency }}</span>
+          <span class="vehicle-type"n>{{ costInfo.type }} | </span>
+          <span class="price">{{ costInfo.typePrice | currency }}</span>
         </li>
       </ul>
     </li>

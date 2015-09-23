@@ -1,45 +1,139 @@
-.mobile-detailing-home-section {
+/******* HEADER/NAV *********/
+
+
+.mobile-detailing-wrapper {
   background-color: #ffffff;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh - 10vh;
   width: 100vw;
 
   .md-logo-header-container {
     background-color: rgb(77, 184, 255);
+    margin: 0;
+    overflow: hidden;
 
     .md-logo-header-inner-container {
       max-width: 960px;
       margin: 0 auto;
       display: flex;
-      align-items: flex-end;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 2000px;
+        height: 1px;
+        top: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        right: 100%;
+      }
+
+      &:after {
+        content: '';
+        width: 2000px;
+        height: 1px;
+        top: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        position: absolute;
+      }
 
       .logo {
         max-width: 100px;
-        margin-right: 30px;
+        margin: 0 30px;
       }
 
       h1 {
         text-transform: uppercase;
         color: #ffffff;
-        text-align: center;
         font-size: 5vmin;
+        position: relative;
+        margin-right: 30px;
+      }
+
+      h6 {
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: left;
+        font-size: 2vmin;
       }
     }
   }
 
-  .navigation {
-    font-size: 3vmin;
-    text-align: center;
+  .nav-wrapper {
+    background-color: rgba(153, 215, 255, 1);
 
-    a {
-      display: inline-block;
-      padding: 0 20px;
-      color: rgb(77, 184, 255);
-      border-right: 1px solid rgba(77, 184, 255, 0.5);
+    .navigation {
+      background-color: rgba(153, 215, 255, 1);
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px 0;
 
-      &:last-of-type {
-        border-right: none;
+      a {
+        font-size: 2vmin;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0 30px;
+        color: #ffffff;
+        position: relative;
+
+        &:after {
+          content: '-';
+          color: rgba(255, 255, 255, 0.8);
+          position: absolute;
+          right: -5px;
+        }
+
+        &:last-of-type:after {
+          content: '';
+        }
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.6);
+        }
       }
     }
   }
 }
+
+/******* MAIN SECTION *********/
+
+.md-home-section {
+  color: rgba(0, 0, 0, 0.6);
+  margin: 5vmin auto;
+  max-width: 700px;
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .hr {
+    height: 1px;
+    width: 200px;
+    background-color: rgba(0,0,0,0.2);
+    margin: 2vmin auto;
+  }
+
+  p {
+    line-height: 2;
+  }
+}
+
+
+/******* FOOTER *********/
+
+.md-footer {
+  position: absolute;
+  width: 100%;
+  padding: 5vh 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  p {
+    text-transform: uppercase;
+    font-size: 1.5vmin;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+

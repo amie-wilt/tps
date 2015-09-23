@@ -6,6 +6,7 @@ $icon-font-path: '../fonts/';
 @import "color-variables";
 @import "home";
 @import "mobile-detailing-home";
+@import "mobile-detailing-about";
 @import "index.scss";
 @import "mobile-detailing-services";
 
@@ -15,9 +16,7 @@ $icon-font-path: '../fonts/';
 
 main {
   font-family: 'Asap', sans-serif;
-  background: url('/images/splash3.jpg') no-repeat center top;
-  background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .browserupgrade {

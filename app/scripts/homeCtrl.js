@@ -19,7 +19,7 @@ var homeFactory = () => {
         sref: 'pressure-washing'
       }
     ],
-    companyTagline: 'My water. My electric. Your convenience.'
+    companyTagline: 'Our water. Our electric. Your convenience.'
   };
 };
 

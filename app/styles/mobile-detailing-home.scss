@@ -1,17 +1,45 @@
 .mobile-detailing-home-section {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffff;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
 
   .md-logo-header-container {
-    display: flex;
-    align-items: center;
+    background-color: rgb(77, 184, 255);
 
-    .logo {
-      max-width: 100px;
+    .md-logo-header-inner-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+
+      .logo {
+        max-width: 100px;
+        margin-right: 30px;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: center;
+        font-size: 5vmin;
+      }
     }
+  }
 
-    h1 {
-      text-transform: uppercase;
-      color: rgb(0, 26, 50);
+  .navigation {
+    font-size: 3vmin;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding: 0 20px;
+      color: rgb(77, 184, 255);
+      border-right: 1px solid rgba(77, 184, 255, 0.5);
+
+      &:last-of-type {
+        border-right: none;
+      }
     }
   }
 }

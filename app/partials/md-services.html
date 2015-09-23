@@ -5,8 +5,8 @@
       <p>{{ service.includes }}</p>
       <ul>
         <li ng-repeat="costInfo in service.prices">
-          <span>{{ costInfo.type }}</span>
-          <span>{{ costInfo.typePrice }}</span>
+          <span>{{ costInfo.type }}: </span>
+          <span>{{ costInfo.typePrice | currency }}</span>
         </li>
       </ul>
     </li>

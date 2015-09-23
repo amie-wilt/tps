@@ -1,14 +1,15 @@
 <section class="home-section">
   <header>
     <hgroup>
-      <img src="images/tps-logo-washed.png" alt="" class="logo"/>
       <h1>{{ companyName }}</h1>
+      <p class="tagline">{{ companyTagline }}</p>
       <div>
         <div>
           <a ng-repeat="service in companyServices" ui-sref="{{ service.sref }}">
-          <h2>{{ service.name }}</h2>
-        </a>
+            <h2>{{ service.name }}</h2>
+          </a>
         </div>
+        <img src="images/tps-logo-washed.png" alt="" class="logo"/>
       </div>
     </hgroup>
   </header>

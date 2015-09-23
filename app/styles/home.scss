@@ -1,37 +1,47 @@
 .home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
   hgroup {
     text-align: center;
 
     .logo {
       max-width: 100px;
+      margin-top: 50px;
     }
 
     h1 {
       font-size: 5vmin;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 1);
-      text-shadow: 1px 1px 2px rgb(0, 26, 50);
-      margin-bottom: 4vmin;
-
+      color: #ffffff;
     }
 
     h2 {
       display: inline-block;
       margin: 0 5px;
       padding: 20px 30px;
-      border: 2px solid rgba(255, 255, 255, 1);
+      border: 2px solid #ffffff;
       font-size: 3vmin;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 1);
-      text-shadow: 1px 1px 1px rgb(0, 26, 50);
+      color: #ffffff;
 
       &:hover {
-        color: rgb(0, 26, 50);
+        color: rgb(77, 184, 255);
         text-shadow: none;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: #ffffff;
         border: 2px solid transparent;
       }
     }
-  }
 
+    .tagline {
+      font-size: 3vmin;
+      position: relative;
+      color: #ffffff;
+      margin-bottom: 5vmin;
+      padding-bottom: 3vmin;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
 }

@@ -5,14 +5,23 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+//Variables
 @import "variables/color-variables";
+
+//Partials
 @import "partials/header";
+
+//Globals
 @import "globals/index";
+
+//Pages
 @import "pages/home";
 @import "pages/about";
 @import "pages/contact";
 @import "pages/secondary-home";
 @import "pages/mobile-detailing-services";
+@import "pages/pressure-washing-services";
 
 
 .browserupgrade {

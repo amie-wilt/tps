@@ -1,0 +1,22 @@
+.pw-services-section {
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  margin: 5rem auto 10rem auto;
+  padding: 0 50px;
+
+  h1 {
+    text-align: center;
+  }
+
+  .pw-services-container {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 2.5rem 0;
+  }
+
+  .pw-services {
+    font-size: 2rem;
+  }
+}

@@ -6,7 +6,7 @@ angular.module('tps', [
   'aboutMod',
   'mdMod',
   'mdServicesMod',
-  'mdGalleryMod',
+  'galleryMod',
   'contactMod',
   'pwMod',
   'pwServicesMod'
@@ -45,7 +45,7 @@ angular.module('tps', [
       .state('mobile-detailing.gallery', {
         url: '/mobile-detailing/gallery',
         templateUrl: '../partials/md-gallery.html',
-        controller: 'mdGalleryCtrl'
+        controller: 'galleryCtrl'
       })
       .state('mobile-detailing.contact', {
         url: '/contact',
@@ -66,6 +66,11 @@ angular.module('tps', [
         url: '/pressure-washing/services',
         templateUrl: '../partials/pw-services.html',
         controller: 'pwServicesCtrl'
+      })
+      .state('pressure-washing.gallery', {
+        url: '/pressure-washing/gallery',
+        templateUrl: '../partials/pw-gallery.html',
+        controller: 'galleryCtrl'
       })
       .state('pressure-washing.contact', {
         url: '/contact',

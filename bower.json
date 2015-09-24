@@ -21,7 +21,10 @@
       "main": [
         "stylesheets/_meyer-reset.scss"
       ]
-    }
+    },
+    "gsap": [
+      "src/minified/TweenMax.min.js"
+    ]
   },
   "devDependencies": {
     "chai": "~3.2.0",

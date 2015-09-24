@@ -1,6 +1,8 @@
-body {
-  overflow: hidden;
-  background-color: #000000;
+.gallery-section {
+  h2 {
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+  }
 }
 
 .slider {
@@ -19,7 +21,8 @@ body {
   left: 0;
 }
 
-.arrow {
+.glyphicon.glyphicon-arrow-left,
+.glyphicon.glyphicon-arrow-right {
   position: absolute;
   z-index: 1002;
   display: block;
@@ -29,33 +32,24 @@ body {
   height: 71px;
   outline: none;
   cursor: pointer;
-  background: url(../assets/img/blank.gif) no-repeat;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.arrow.prev {
+.glyphicon-arrow-left {
   opacity: 0.2;
-  left: 20px;
-  background-image: url(../assets/img/paddle_prev_999.png);
+  left: 10px;
   transition: 0.2s linear all;
 }
 
-.arrow.next {
+.glyphicon-arrow-right {
   opacity: 0.2;
-  right: 20px;
-  background-image: url(../assets/img/paddle_next_999.png);
+  right: 10px;
   transition: 0.2s linear all;
+  text-align: right;
 }
-
-.arrow.prev:hover {
-  opacity: 1;
-  background-image: url(../assets/img/paddle_prev_fff.png);
-}
-
-.arrow.next:hover {
-  opacity: 1;
-  background-image: url(../assets/img/paddle_next_fff.png);
-}
-
 
 
 /*---------------------------------------------------------
@@ -91,6 +85,10 @@ NAV
 .nav .dot, .nav .dot a {
   display: inline-block;
   zoom: 1;
+}
+
+.dots {
+  padding: 0;
 }
 
 .dots .dot {

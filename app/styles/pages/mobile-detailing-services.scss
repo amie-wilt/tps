@@ -2,6 +2,7 @@
   color: rgba(0, 0, 0, 0.6);
   max-width: 700px;
   margin: 5rem auto 10rem auto;
+  padding: 0 50px;
 
   h1 {
     text-align: center;
@@ -43,11 +44,12 @@
           }
 
           .price {
+            display: inline-block;
+            width: 60px;
+            margin-left: 10px;
             font-weight: bold;
             color: rgb(153, 204, 0);
-            margin-left: 10px;
             border-left: 1px solid rgba(0,0,0,0.2);
-            padding-left: 10px;
           }
         }
       }

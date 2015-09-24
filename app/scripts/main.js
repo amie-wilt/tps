@@ -57,15 +57,9 @@ angular.module('tps', [
         controller: 'pwCtrl'
       })
       .state('pressure-washing.about', {
-<<<<<<< HEAD
-        url: '/pressure-washing/about',
-        templateUrl: '../partials/pw-about.html',
-        controller: 'pwAboutCtrl'
-=======
         url: '/about',
         templateUrl: '../partials/about.html',
         controller: 'aboutCtrl'
->>>>>>> working
       })
       .state('pressure-washing.services', {
         url: '/pressure-washing/services',

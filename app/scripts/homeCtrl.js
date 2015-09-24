@@ -2,6 +2,7 @@ class HomeCtrl {
   constructor($scope, homeFac) {
     $scope.companyName = homeFac.companyName;
     $scope.companyServices = homeFac.companyServices;
+    $scope.companyTagline = homeFac.companyTagline;
   }
 }
 
@@ -17,7 +18,8 @@ var homeFactory = () => {
         name: 'Pressure Washing',
         sref: 'pressure-washing'
       }
-    ]
+    ],
+    companyTagline: 'Our water. Our electric. Your convenience.'
   };
 };
 

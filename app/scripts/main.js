@@ -3,10 +3,11 @@
 angular.module('tps', [
   'ui.router',
   'homeMod',
-  'mdAboutMod',
-  'mdGalleryMod',
+  'aboutMod',
+  'mdMod',
   'mdServicesMod',
-  'pwAboutMod',
+  'contactMod',
+  'pwMod',
   'pwServicesMod'
 ])
 
@@ -20,14 +21,20 @@ angular.module('tps', [
         templateUrl: 'views/home.html',   //the location of the html file for the state
         controller: 'homeCtrl'            //the controller associated with the state,
       })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: '/views/contact.html',
+        controller: 'contactCtrl'
+      })
       .state('mobile-detailing', {
         url: '/mobile-detailing',
-        templateUrl: '../views/mobile-detailing.html'
+        templateUrl: '../views/mobile-detailing.html',
+        controller: 'mdCtrl'
       })
       .state('mobile-detailing.about', {
-        url: '/mobile-detailing/about',
-        templateUrl: '../partials/md-about.html',
-        controller: 'mdAboutCtrl'
+        url: '/about',
+        templateUrl: '../partials/about.html',
+        controller: 'aboutCtrl'
       })
       .state('mobile-detailing.services', {
         url: '/mobile-detailing/services',
@@ -41,16 +48,24 @@ angular.module('tps', [
       })
       .state('mobile-detailing.contact', {
         url: '/contact',
-        templateUrl: 'views/contact.html'
+        templateUrl: 'views/contact.html',
+        controller: 'contactCtrl'
       })
       .state('pressure-washing', {
         url: '/pressure-washing',
-        templateUrl: '../views/pressure-washing.html'
+        templateUrl: '../views/pressure-washing.html',
+        controller: 'pwCtrl'
       })
       .state('pressure-washing.about', {
+<<<<<<< HEAD
         url: '/pressure-washing/about',
         templateUrl: '../partials/pw-about.html',
         controller: 'pwAboutCtrl'
+=======
+        url: '/about',
+        templateUrl: '../partials/about.html',
+        controller: 'aboutCtrl'
+>>>>>>> working
       })
       .state('pressure-washing.services', {
         url: '/pressure-washing/services',

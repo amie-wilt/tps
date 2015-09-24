@@ -16,10 +16,16 @@
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
       ]
+    },
+    "meyer-reset": {
+      "main": [
+        "stylesheets/_meyer-reset.scss"
+      ]
     }
   },
   "devDependencies": {
     "chai": "~3.2.0",
+    "meyer-reset": "*",
     "mocha": "~2.3.2"
   }
 }

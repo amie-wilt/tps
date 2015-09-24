@@ -1,0 +1,23 @@
+.secondary-home-wrapper {
+  background-color: #ffffff;
+  margin: 0 auto;
+  min-height: 100vh - 10vh;
+  width: 100vw;
+}
+
+.secondary-home-section {
+  color: rgba(0, 0, 0, 0.6);
+  margin: 5rem auto;
+  max-width: 960px;
+  padding: 0 50px;
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  p {
+    line-height: 2;
+  }
+}
+

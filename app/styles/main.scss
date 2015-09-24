@@ -3,29 +3,14 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import "color-variables";
-@import "home";
-@import "mobile-detailing-home";
-@import "mobile-detailing-about";
-@import "index.scss";
-@import "mobile-detailing-services";
-
-* {
-  box-sizing: border-box;
-}
-
-main {
-  font-family: 'Asap', sans-serif;
-  min-height: 100vh;
-}
-
-.hr {
-  height: 1px;
-  width: 200px;
-  background-color: rgba(0,0,0,0.2);
-  margin: 2vmin auto;
-}
-
+@import "variables/color-variables";
+@import "partials/header";
+@import "globals/index";
+@import "pages/home";
+@import "pages/about";
+@import "pages/contact";
+@import "pages/secondary-home";
+@import "pages/mobile-detailing-services";
 
 
 .browserupgrade {

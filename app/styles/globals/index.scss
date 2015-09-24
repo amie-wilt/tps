@@ -1,9 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  font-family: 'Asap', sans-serif;
+  min-height: 100vh;
+}
+
+.hr {
+  height: 1px;
+  width: 200px;
+  background-color: rgba(0,0,0,0.2);
+  margin: 2rem auto;
+}
+
 .section-wrapper {
   width: 100%;
   min-height: 100vh;
 }
-
-/******* FOOTER *********/
 
 footer {
   position: absolute;
@@ -13,7 +27,7 @@ footer {
 
   p {
     text-transform: uppercase;
-    font-size: 1.5vmin;
+    font-size: 1.5rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
   }

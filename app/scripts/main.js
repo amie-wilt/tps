@@ -3,11 +3,11 @@
 angular.module('tps', [
   'ui.router',
   'homeMod',
+  'aboutMod',
   'mdMod',
-  'mdAboutMod',
   'mdServicesMod',
   'contactMod',
-  'pwAboutMod',
+  'pwMod',
   'pwServicesMod'
 ])
 
@@ -32,9 +32,9 @@ angular.module('tps', [
         controller: 'mdCtrl'
       })
       .state('mobile-detailing.about', {
-        url: '/mobile-detailing/about',
-        templateUrl: '../partials/md-about.html',
-        controller: 'mdAboutCtrl'
+        url: '/about',
+        templateUrl: '../partials/about.html',
+        controller: 'aboutCtrl'
       })
       .state('mobile-detailing.services', {
         url: 'mobile-detailing/services',
@@ -48,12 +48,13 @@ angular.module('tps', [
       })
       .state('pressure-washing', {
         url: '/pressure-washing',
-        templateUrl: '../views/pressure-washing.html'
+        templateUrl: '../views/pressure-washing.html',
+        controller: 'pwCtrl'
       })
       .state('pressure-washing.about', {
-        url: 'pressure-washing/about',
-        templateUrl: '../partials/pw-about.html',
-        controller: 'pwAboutCtrl'
+        url: '/about',
+        templateUrl: '../partials/about.html',
+        controller: 'aboutCtrl'
       })
       .state('pressure-washing.services', {
         url: 'pressure-washing/services',

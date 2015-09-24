@@ -2,7 +2,7 @@ class MdGalleryCtrl {
   constructor($scope, mdGalleryFac) {
     $scope.slides = mdGalleryFac.slides;
     $scope.currentIndex = 0;
-    $scope.setCurrentIndex = (i) => {
+    $scope.setCurrentSlideIndex = (i) => {
       $scope.currentIndex = i;
     };
     $scope.isCurrentSlideIndex = (i) => {

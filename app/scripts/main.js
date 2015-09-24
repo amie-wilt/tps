@@ -6,6 +6,7 @@ angular.module('tps', [
   'aboutMod',
   'mdMod',
   'mdServicesMod',
+  'mdGalleryMod',
   'contactMod',
   'pwMod',
   'pwServicesMod'

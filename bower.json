@@ -7,6 +7,7 @@
     "angular-ui-router": "~0.2.15",
     "bootstrap-sass": "~3.3.5",
     "gsap": "~1.18.0",
+    "meyer-reset": "*",
     "modernizr": "~2.8.1"
   },
   "overrides": {
@@ -19,7 +20,7 @@
     },
     "meyer-reset": {
       "main": [
-        "stylesheets/_meyer-reset.scss"
+        "stylesheets/test.css"
       ]
     },
     "gsap": [
@@ -28,7 +29,6 @@
   },
   "devDependencies": {
     "chai": "~3.2.0",
-    "meyer-reset": "*",
     "mocha": "~2.3.2"
   }
 }

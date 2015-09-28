@@ -1,7 +1,5 @@
 $icon-font-path: '../fonts/';
 
-@import 'slider';
-
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -11,9 +9,11 @@ $icon-font-path: '../fonts/';
 
 //Partials
 @import "partials/header";
+@import 'partials/slider';
 
 //Globals
 @import "globals/index";
+
 
 //Pages
 @import "pages/home";

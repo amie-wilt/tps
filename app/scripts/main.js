@@ -2,6 +2,7 @@
 
 angular.module('tps', [
   'ui.router',
+  'templates',
   'homeMod',
   'aboutMod',
   'mdMod',
@@ -29,22 +30,22 @@ angular.module('tps', [
       })
       .state('mobile-detailing', {
         url: '/mobile-detailing',
-        templateUrl: '../views/mobile-detailing.html',
+        templateUrl: 'views/mobile-detailing.html',
         controller: 'mdCtrl'
       })
       .state('mobile-detailing.about', {
         url: '/about',
-        templateUrl: '../partials/about.html',
+        templateUrl: 'partials/about.html',
         controller: 'aboutCtrl'
       })
       .state('mobile-detailing.services', {
         url: '/mobile-detailing/services',
-        templateUrl: '../partials/md-services.html',
+        templateUrl: 'partials/md-services.html',
         controller: 'mdServicesCtrl'
       })
       .state('mobile-detailing.gallery', {
         url: '/mobile-detailing/gallery',
-        templateUrl: '../partials/md-gallery.html',
+        templateUrl: 'partials/md-gallery.html',
         controller: 'galleryCtrl'
       })
       .state('mobile-detailing.contact', {
@@ -54,22 +55,22 @@ angular.module('tps', [
       })
       .state('pressure-washing', {
         url: '/pressure-washing',
-        templateUrl: '../views/pressure-washing.html',
+        templateUrl: 'views/pressure-washing.html',
         controller: 'pwCtrl'
       })
       .state('pressure-washing.about', {
         url: '/about',
-        templateUrl: '../partials/about.html',
+        templateUrl: 'partials/about.html',
         controller: 'aboutCtrl'
       })
       .state('pressure-washing.services', {
         url: '/pressure-washing/services',
-        templateUrl: '../partials/pw-services.html',
+        templateUrl: 'partials/pw-services.html',
         controller: 'pwServicesCtrl'
       })
       .state('pressure-washing.gallery', {
         url: '/pressure-washing/gallery',
-        templateUrl: '../partials/pw-gallery.html',
+        templateUrl: 'partials/pw-gallery.html',
         controller: 'galleryCtrl'
       })
       .state('pressure-washing.contact', {

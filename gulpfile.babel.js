@@ -1,8 +1,9 @@
 // generated on 2015-09-08 using generator-gulp-webapp 1.0.3
 
 import gulp from 'gulp';
-import gulpBabel from 'gulp-babel';
+import templateCache from 'gulp-angular-templatecache';
 import es from 'event-stream';
+import ngAnnotate from 'gulp-ng-annotate';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
@@ -47,27 +48,41 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('babel', () => {
+gulp.task('babel', ['lint'], () => {
   return gulp.src('app/scripts/*.js')
     .pipe($.babel())
+    .pipe(ngAnnotate())
     .pipe(gulp.dest('.tmp/scripts'))
 });
 
 gulp.task('js', ['babel'], () => {
   return gulp.src('.tmp/scripts/*.js')
     .pipe($.sourcemaps.init())
-    .pipe($.concat('main.js'))
+    .pipe($.concat('all.js'))
     .pipe($.uglify())
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/scripts'))
 });
 
+gulp.task('templatecache', () => {
+  return gulp.src('app/**/*.html')
+    .pipe(templateCache({
+      standalone: true
+    }))
+    .pipe(gulp.dest('.tmp/scripts'))
+});
+
 gulp.task('html', ['styles'], () => {
-  const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
+  const assets = $.useref.assets({
+    searchPath: ['.tmp', 'app', '.']
+  });
 
   return gulp.src('app/*.html')
     .pipe(assets)
-    .pipe($.if('styles/*.css', $.minifyCss({compatibility: '*'})))
+    .pipe($.debug())
+    .pipe($.if('*.css', $.minifyCss({
+      compatibility: '*'
+    })))
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({
@@ -117,7 +132,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['babel', 'js', 'styles', 'fonts'], () => {
+gulp.task('serve', ['babel', 'js', 'styles', 'fonts', 'templatecache'], () => {
   browserSync({
     notify: false,
     port: 9001,
@@ -141,7 +156,8 @@ gulp.task('serve', ['babel', 'js', 'styles', 'fonts'], () => {
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
   gulp.watch('app/scripts/**/*.js', ['babel']);
-  gulp.watch('.tmp/scripts/*.js', ['js'])
+  gulp.watch('.tmp/scripts/*.js', ['js']);
+  gulp.watch('app/**/*.html', ['templatecache']);
 });
 
 gulp.task('serve:dist', () => {

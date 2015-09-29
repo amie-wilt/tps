@@ -20,14 +20,19 @@ main {
 }
 
 footer {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 5vh 0;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 1vh;
 
   p {
+    padding: 1vh 0;
+    margin-bottom: 0;
     text-transform: uppercase;
     font-size: 1.5rem;
+    line-height: 1;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
   }

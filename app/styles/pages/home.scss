@@ -1,24 +1,62 @@
+.section-wrapper {
+  background-color: #{$tps-blue};
+}
+
 .home-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgba(77, 184, 255, 1);
+  // You had this, but it gets wonky when scrolling happens on mobile, check it out.
+  //height: 100vh
+  height: 100%;
+  background-color: #{$tps-blue};
   text-align: center;
 
+  @media #{$phone} {
+    align-items: flex-start;
+  }
+
   .logo {
-    max-width: 125px;
+    max-width: 150px;
     margin-top: 50px;
+    margin-bottom: 75px;
+
+    @media #{$phone} {
+      max-width: 125px;
+      color: orangered;
+      margin-bottom: 30px;
+    }
   }
 
   h1 {
     font-size: 5rem;
     text-transform: uppercase;
     color: #ffffff;
+    padding: 0 15px;
+
+    @media #{$phone} {
+      font-size: 4rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 5px;
+
+    &:hover h2 {
+      color: rgb(77, 184, 255);
+      text-shadow: none;
+      background-color: #ffffff;
+      border: 2px solid transparent;
+    }
+
+    @media #{$phone} {
+      margin-bottom: 3rem;
+    }
   }
 
   h2 {
-    display: inline-block;
     margin: 0 5px;
     padding: 20px 30px;
     border: 2px solid #ffffff;
@@ -26,13 +64,6 @@
     text-transform: uppercase;
     color: #ffffff;
     transition: 0.3s ease;
-
-    &:hover {
-      color: rgb(77, 184, 255);
-      text-shadow: none;
-      background-color: #ffffff;
-      border: 2px solid transparent;
-    }
   }
 
   .tagline {
@@ -42,6 +73,11 @@
     margin-bottom: 5rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    @media #{$phone} {
+      font-size: 2rem;
+      margin: 0 20px 4rem;
+    }
   }
 }
 

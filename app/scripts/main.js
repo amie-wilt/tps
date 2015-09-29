@@ -3,6 +3,7 @@
 angular.module('tps', [
   'ui.router',
   'templates',
+  'ngAnimate',
   'homeMod',
   'aboutMod',
   'mdMod',

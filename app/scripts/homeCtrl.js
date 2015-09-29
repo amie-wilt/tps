@@ -27,3 +27,9 @@ angular.module('homeMod', [])
   .factory('homeFac', homeFactory)
 
   .controller('homeCtrl', HomeCtrl);
+
+  //.animation('.home-page-company-name', () => {
+  //  return {
+  //
+  //  }
+  //});

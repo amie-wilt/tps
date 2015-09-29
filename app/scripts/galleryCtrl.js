@@ -72,7 +72,7 @@ var galleryFactory = () => {
   };
 };
 
-angular.module('galleryMod', ['ngAnimate'])
+angular.module('galleryMod', [])
   .factory('galleryFac', galleryFactory)
 
   .controller('galleryCtrl', GalleryCtrl)

@@ -20,12 +20,14 @@
     },
     "meyer-reset": {
       "main": [
-        "stylesheets/test.css"
+        "stylesheets/_meyer-reset.scss"
       ]
     },
-    "gsap": [
-      "src/minified/TweenMax.min.js"
-    ]
+    "gsap": {
+      "main": [
+        "src/uncompressed/TweenMax.js"
+      ]
+    }
   },
   "devDependencies": {
     "chai": "~3.2.0",

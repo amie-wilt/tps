@@ -75,34 +75,34 @@ var galleryFactory = () => {
 angular.module('galleryMod', ['ngAnimate'])
   .factory('galleryFac', galleryFactory)
 
-  .controller('galleryCtrl', GalleryCtrl);
+  .controller('galleryCtrl', GalleryCtrl)
 
-  //.animation('.slide-animation', () => {
-  //  return {
-  //    addClass: (element, className, done) => {
-  //      if (className === 'ng-hide') {
-  //        TweenMax.to(element, 0.5, {
-  //          left: -element.parent().width(),
-  //          onComplete: done
-  //        });
-  //      } else {
-  //        done();
-  //      }
-  //    },
-  //    removeClass: (element, className, done) => {
-  //      if (className === 'ng-hide') {
-  //        TweenMax.set(element, {
-  //          left: element.parent().width()
-  //        });
-  //        TweenMax.to(element, 0.5, {
-  //          left: 0,
-  //          onComplete: done
-  //        });
-  //      } else {
-  //        done();
-  //      }
-  //    }
-  //  };
-  //});
+  .animation('.slide-animation', () => {
+    return {
+      addClass: (element, className, done) => {
+        if (className === 'ng-hide') {
+          TweenMax.to(element, 0.5, {
+            left: -element.parent().width(),
+            onComplete: done
+          });
+        } else {
+          done();
+        }
+      },
+      removeClass: (element, className, done) => {
+        if (className === 'ng-hide') {
+          TweenMax.set(element, {
+            left: element.parent().width()
+          });
+          TweenMax.to(element, 0.5, {
+            left: 0,
+            onComplete: done
+          });
+        } else {
+          done();
+        }
+      }
+    };
+  });
 
 

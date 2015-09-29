@@ -37,7 +37,8 @@
   "eslintConfig": {
     "globals": {
       "angular": true,
-      "$": false
+      "$": false,
+      "TweenMax": false
     },
     "env": {
       "node": true,

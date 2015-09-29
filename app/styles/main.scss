@@ -7,6 +7,7 @@ $icon-font-path: '../fonts/';
 //Variables
 @import "variables/color-variables";
 @import "variables/media-queries";
+@import "variables/mixins";
 
 //Partials
 @import "partials/header";

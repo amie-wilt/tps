@@ -1,4 +1,6 @@
 .gallery-section {
+  @include section-base;
+
   h2 {
     text-align: center;
     color: rgba(0,0,0,0.6);

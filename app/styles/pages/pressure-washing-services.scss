@@ -1,8 +1,5 @@
 .pw-services-section {
-  color: rgba(0, 0, 0, 0.6);
-  max-width: 700px;
-  margin: 5rem auto 10rem auto;
-  padding: 0 50px;
+  @include section-base;
 
   h1 {
     text-align: center;

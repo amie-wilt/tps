@@ -1,0 +1,11 @@
+@mixin paragraph {
+  line-height: 2;
+  font-size: 1.25rem;
+}
+
+@mixin section-base {
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 0 50px;
+}

@@ -1,23 +1,32 @@
 .secondary-home-wrapper {
   background-color: #ffffff;
-  margin: 0 auto;
   min-height: 100vh - 10vh;
   width: 100vw;
 }
 
 .secondary-home-section {
-  color: rgba(0, 0, 0, 0.6);
-  margin: 5rem auto;
-  max-width: 960px;
-  padding: 0 50px;
+  @include section-base;
+
+  @media #{$phone} {
+    margin: 2rem auto;
+  }
 
   h2 {
     text-transform: uppercase;
     text-align: center;
+
+    @media #{$phone} {
+      font-size: 1.5rem;
+    }
   }
 
   p {
-    line-height: 2;
+    @include paragraph;
+
+    @media #{$phone} {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
   }
 }
 

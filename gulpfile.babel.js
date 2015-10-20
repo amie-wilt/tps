@@ -77,7 +77,7 @@ gulp.task('html', ['styles'], () => {
     searchPath: ['.tmp', 'app', '.']
   });
 
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe(assets)
     .pipe($.debug())
     .pipe($.if('*.css', $.minifyCss({

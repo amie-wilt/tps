@@ -12,6 +12,7 @@
 
     @media #{$phone} {
       display: block;
+      text-align: center;
     }
 
     &:before {
@@ -82,18 +83,31 @@
 
   .mobile-menu-toggle {
     display: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 24px;
-    line-height: 1;
-    padding: 15px;
-    margin: 0;
-    background: none;
-    border: 0;
 
     @media #{$phone} {
       display: inline-block;
-      margin: 0 auto;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 70px;
+      height: 70px;
+      background-color: rgb(77, 184, 255);
+      border: none;
+      user-focus: none;
+    }
+
+    .mobile-menu-toggle-text-wrapper {
+      position: absolute;
+      background-color: #fff;
+      width: 44px;
+      height: 5px;
+      top: 50%;
+      left: 50%;
+      margin: -2px 0 0 -22px;
+
+      .mobile-menu-toggle-text {
+        display: none;
+      }
     }
   }
 

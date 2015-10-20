@@ -11,6 +11,12 @@
   }
 }
 
+.md-services-list {
+  :last-child {
+    border-bottom: none;
+  }
+}
+
 .md-service-list-wrapper {
   display: flex;
   justify-content: space-between;
@@ -24,6 +30,7 @@
     flex-direction: column;
     align-items: center;
   }
+
 
   .service-name-includes-container {
     max-width: 50%;

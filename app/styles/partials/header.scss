@@ -87,6 +87,7 @@
     @media #{$phone} {
       display: inline-block;
       position: fixed;
+      z-index: 2;
       bottom: 0;
       right: 0;
       width: 70px;
@@ -94,16 +95,43 @@
       background-color: rgb(77, 184, 255);
       border: none;
       user-focus: none;
+      border-top-left-radius: 1px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .mobile-menu-toggle-text-wrapper {
       position: absolute;
       background-color: #fff;
       width: 44px;
-      height: 5px;
+      height: 4px;
       top: 50%;
       left: 50%;
       margin: -2px 0 0 -22px;
+      border-radius: 1px;
+
+      &:before,
+      &:after {
+        content: '';
+        background: #fff;
+        position: absolute;
+        width: 44px;
+        height: 4px;
+        top: 50%;
+        left: 50%;
+        margin-left: -22px;
+        border-radius: 1px;
+      }
+
+      &:before {
+        margin-top: -14px;
+      }
+
+      &:after {
+        margin-top: 10px;
+      }
 
       .mobile-menu-toggle-text {
         display: none;

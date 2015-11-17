@@ -83,6 +83,7 @@
   transition: transform 0.3s;
 
   @media #{$phone} {
+    background-color: rgba(153, 215, 255, 1);
     position: fixed;
     bottom: -220px;
     left: 0;
@@ -92,6 +93,10 @@
 
     &.active {
       transform: translate3d(0,-220px,0);
+
+      @media #{$small} {
+        transform: translate3d(0, -174px, 0);
+      }
     }
   }
 }
@@ -104,7 +109,7 @@
   margin-left: auto;
   width: 70px;
   height: 70px;
-  background-color: rgba(153, 215, 255, 1);
+  background-color: rgb(77, 184, 255);
   border: none;
   user-focus: none;
   border-top-left-radius: 1px;
@@ -117,9 +122,15 @@
     }
   }
 
+  @media #{$small} {
+    width: 44px;
+    height: 44px;
+    top: -44px;
+  }
+
   .mobile-menu-toggle-text-wrapper {
     position: absolute;
-    background-color: rgb(64,86,255);
+    background-color: rgb(255, 255, 255);
     width: 44px;
     height: 4px;
     top: 50%;
@@ -127,6 +138,12 @@
     margin: -2px 0 0 -22px;
     border-radius: 1px;
     transition: 0.3s linear;
+
+    @media #{$small} {
+      margin: -1px 0 0 -11px;
+      width: 22px;
+      height: 2px;
+    }
 
     .active & {
       transform: rotate(45deg);
@@ -141,11 +158,10 @@
       }
     }
 
-
     &:before,
     &:after {
       content: '';
-      background: rgb(64,86,255);
+      background: rgb(255, 255, 255);
       position: absolute;
       width: 44px;
       height: 4px;
@@ -154,14 +170,28 @@
       margin-left: -22px;
       border-radius: 1px;
 
+      @media #{$small} {
+        margin-left: -11px;
+        width: 22px;
+        height: 2px;
+      }
+
     }
 
     &:before {
       margin-top: -14px;
+
+      @media #{$small} {
+        margin-top: -7px;
+      }
     }
 
     &:after {
       margin-top: 10px;
+
+      @media #{$small} {
+        margin-top: 5px;
+      }
     }
 
     .mobile-menu-toggle-text {
@@ -198,12 +228,26 @@
   }
 
   @media #{$phone} {
+    background-color: rgb(77, 184, 255);
     padding: 10px 0;
     margin-top: -70px;
 
     a {
       padding: 5px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       display: block;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @media #{$small} {
+    margin-top: -44px;
+
+    a {
+      font-size: 1rem;
     }
   }
 }

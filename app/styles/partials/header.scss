@@ -80,7 +80,7 @@
 
 .nav-wrapper {
   background-color: rgba(153, 215, 255, 1);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 
   @media #{$phone} {
     position: fixed;
@@ -126,7 +126,7 @@
     left: 50%;
     margin: -2px 0 0 -22px;
     border-radius: 1px;
-    transition: 0.3s linear;
+    transition: 0.5s;
 
     .active & {
       transform: rotate(45deg);

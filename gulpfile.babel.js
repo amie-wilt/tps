@@ -34,7 +34,13 @@ function lint(files, options) {
         stream: true,
         once: true
       }))
-      .pipe($.eslint(options))
+      .pipe($.eslint({
+          "rules": {
+            "no-unused-vars": false,
+            "eol-last": false,
+            "no-trailing-spaces": false
+          }
+        }))
       .pipe($.eslint.format())
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
   };

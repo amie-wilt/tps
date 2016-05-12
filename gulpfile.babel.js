@@ -8,6 +8,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+// import es2015 from 'babel-preset-2015';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -56,7 +57,9 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('babel', ['lint'], () => {
   return gulp.src('app/scripts/*.js')
-    .pipe($.babel())
+    .pipe($.babel({
+      presets: ['es2015']
+    }))
     .pipe(ngAnnotate())
     .pipe(gulp.dest('.tmp/scripts'))
 });

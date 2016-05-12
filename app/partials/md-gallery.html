@@ -5,8 +5,10 @@
   <div class="container slider">
     <img ng-repeat="slide in slides" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{ slide.image }}" class="slide slide-animation" alt="" style="width: 100%;"/>
 
-    <a href="#" class="glyphicon glyphicon-arrow-left" ng-click="nextSlide()"></a>
-    <a href="#" class="glyphicon glyphicon-arrow-right" ng-click="prevSlide()"></a>
+    <div class="slider-controls">
+      <a href="#" class="glyphicon glyphicon-arrow-left" ng-click="nextSlide()"></a>
+      <a href="#" class="glyphicon glyphicon-arrow-right" ng-click="prevSlide()"></a>
+    </div>
 
     <nav class="nav">
       <div class="wrapper">

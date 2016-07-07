@@ -17,6 +17,10 @@ var homeFactory = () => {
       {
         name: 'Pressure Washing',
         sref: 'pressure-washing'
+      },
+      {
+        name: 'Window Cleaning',
+        sref: 'window-cleaning'
       }
     ],
     companyTagline: 'Our water. Our electric. Your convenience.'

@@ -10,7 +10,9 @@ angular.module('tps', [
   'galleryMod',
   'contactMod',
   'pwMod',
-  'pwServicesMod'
+  'pwServicesMod',
+  'windowMod',
+  'windowServicesMod'
 ])
 
   .config(function($stateProvider, $urlRouterProvider) {
@@ -75,7 +77,33 @@ angular.module('tps', [
       })
       .state('pressure-washing.contact', {
         url: '/contact',
-        templateUrl: 'views/contact.html'
+        templateUrl: 'views/contact.html',
+        controller: 'contactCtrl'
+      })
+      .state('window-cleaning', {
+        url: '/window-cleaning',
+        templateUrl: 'views/window-cleaning.html',
+        controller: 'windowCtrl'
+      })
+      .state('window-cleaning.about', {
+        url: '/about',
+        templateUrl: 'partials/about.html',
+        controller: 'aboutCtrl'
+      })
+      .state('window-cleaning.services', {
+        url: '/window-cleaning/services',
+        templateUrl: 'partials/window-services.html',
+        controller: 'windowServicesCtrl'
+      })
+      .state('window-cleaning.gallery', {
+        url: '/gallery',
+        templateUrl: 'partials/pw-gallery.html',
+        controller: 'galleryCtrl'
+      })
+      .state('window-cleaning.contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html',
+        controller: 'contactCtrl'
       });
   });
 
@@ -89,9 +117,9 @@ class MobileMenu {
     this.validator = false;
 
     this.$menuToggle.on(`click`, () => {
+      console.log('clicked');
         this.validate();
-        });
-
+    });
   }
 
   showMenu() {
@@ -120,4 +148,4 @@ $(function() {
 
   var mobilemenu = new MobileMenu($('[data-class="menu-container"]'));
 
-});
+})();

@@ -1,0 +1,46 @@
+<div class="secondary-home-wrapper">
+  <div class="logo-header-container jumbotron">
+    <div class="logo-header-inner-container">
+      <a ui-sref="home">
+        <img src="images/tps-logo-washed.svg" alt="" class="logo"/>
+      </a>
+
+      <div class="title-name-container">
+        <h1>{{ title }}</h1>
+
+        <p>{{ tagline }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-wrapper" data-class="menu-container">
+    <button class="mobile-menu-toggle" data-class="mobile-menu-toggle">
+      <span class="mobile-menu-toggle-text-wrapper">
+        <span class="mobile-menu-toggle-text">Click to open the mobile menu</span>
+      </span>
+    </button>
+    <nav role="navigation" class="navigation" data-class="menu">
+      <a ui-sref=window-cleaning>Home</a>
+      <a ui-sref="window-cleaning.services">Services</a>
+      <a ui-sref="window-cleaning.gallery">Gallery</a>
+      <a ui-sref="window-cleaning.about">About</a>
+      <a ui-sref="window-cleaning.contact">Contact</a>
+    </nav>
+  </div>
+
+  <div ui-view>
+    <section class="secondary-home-section">
+      <h2>{{ descriptionTagline }}</h2>
+
+      <div class="hr"></div>
+      <p ng-repeat="description in descriptions">{{ description }}</p>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Tony's Performance Services | 2015</p>
+  <p>Serving Sarasota, Bradenton and the surrounding areas.</p>
+  <a href="tel:+19415363939">941.536.3939</a>
+  <a href="mailto:amie.wilt@gmail.com">amie.wilt@gmail.com</a>
+</footer>

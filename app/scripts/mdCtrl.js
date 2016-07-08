@@ -4,6 +4,10 @@ class MdCtrl {
     $scope.tagline = mdFac.tagline;
     $scope.descriptionTagline = mdFac.descriptionTagline;
     $scope.descriptions = mdFac.descriptions;
+    $scope.isActive = false;
+    $scope.activeButton = () => {
+      $scope.isActive = !$scope.isActive;
+    };
   }
 }
 

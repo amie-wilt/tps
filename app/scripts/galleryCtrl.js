@@ -81,8 +81,9 @@ angular.module('galleryMod', [])
     return {
       addClass: (element, className, done) => {
         if (className === 'ng-hide') {
-          TweenMax.to(element, 0.5, {
+          TweenMax.to(element, 0.2, {
             left: -element.parent().width(),
+            opacity: 0,
             onComplete: done
           });
         } else {
@@ -96,6 +97,7 @@ angular.module('galleryMod', [])
           });
           TweenMax.to(element, 0.5, {
             left: 0,
+            opacity: 1,
             onComplete: done
           });
         } else {

@@ -4,6 +4,10 @@ class WindowCtrl {
     $scope.tagline = windowFac.tagline;
     $scope.descriptionTagline = windowFac.descriptionTagline;
     $scope.descriptions = windowFac.descriptions;
+    $scope.isActive = false;
+    $scope.activeButton = () => {
+      $scope.isActive = !$scope.isActive;
+    };
   }
 }
 

@@ -13,8 +13,8 @@
     </div>
   </div>
 
-  <div class="nav-wrapper" data-class="menu-container">
-    <button class="mobile-menu-toggle" data-class="mobile-menu-toggle">
+  <div class="nav-wrapper" ng-class="{'active': isActive}" data-class="menu-container">
+    <button class="mobile-menu-toggle" data-class="mobile-menu-toggle"  ng-click="activeButton()">
       <span class="mobile-menu-toggle-text-wrapper">
         <span class="mobile-menu-toggle-text">Click to open the mobile menu</span>
       </span>
@@ -42,5 +42,5 @@
   <p>Tony's Performance Services | 2015</p>
   <p>Serving Sarasota, Bradenton and the surrounding areas.</p>
   <a href="tel:+19415363939">941.536.3939</a>
-  <a href="mailto:amie.wilt@gmail.com">amie.wilt@gmail.com</a>
+  <a href="mailto:tonytdetailing@gmail.com">tonytdetailing@gmail.com</a>
 </footer>

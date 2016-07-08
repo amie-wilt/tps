@@ -4,6 +4,10 @@ class PwCtrl {
     $scope.tagline = pwFac.tagline;
     $scope.descriptionTagline = pwFac.descriptionTagline;
     $scope.descriptions = pwFac.descriptions;
+    $scope.isActive = false;
+    $scope.activeButton = () => {
+      $scope.isActive = !$scope.isActive;
+    };
   };
 }
 
